@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Course Access Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <header class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand" href="#">Abdalaal Academy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            <h2 id="welcomeMessage">Welcome to the Math Course</h2>
+            <h5>by <a href="https://www.facebook.com/m.abdelaal1969?mibextid=ZbWKwL">Mohamed Abdalaal</a></h5>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="loginForm">
+                <h3 class="Pl-em-txt">Please enter your email and password to access the course :</h3>
+                <div class="sign-up-wrapper"><a class="sign-up" href="https://forms.gle/J99yvjPror5qe9BSA">Don't have an
+                        email ? Sign up !</a></div>
+                <div class="form-group">
+                    <input type="email" id="emailInput" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="passwordInput" class="form-control" placeholder="Password">
+                </div>
+                <button onclick="checkCredentials()" class="btn btn-primary">Submit</button>
+                <div class="terms-link">
+                    By submitting, you agree to our <a href="#" onclick="showTermsWindow()">terms and conditions</a> .
+                </div>
+            </div>
+
+            <div id="videoContainer" style="display: none;">
+                <h1>Video Player</h1>
+                <div class="row">
+                    <div class="col-md-8 order-md-2">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video id="courseVideo" class="embed-responsive-item" controls></video>
+                        </div>
+                    </div>
+                    <div class="col-md-4 order-md-1">
+                        <div class="accordion" id="accordionSections">
+                            <div class="card">
+                                <div class="card-header" id="section1">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapseSection1" aria-expanded="true"
+                                            aria-controls="collapseSection1">
+                                            Section 1
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSection1" class="collapse show" aria-labelledby="section1"
+                                    data-parent="#accordionSections">
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item" data-video-src="video.mp4">Video 1</li>
+                                            <li class="list-group-item" data-video-src="video.mp4">Video 2</li>
+                                            <li class="list-group-item" data-video-src="video.mp4">Video 3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="section2">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseSection2" aria-expanded="false"
+                                            aria-controls="collapseSection2">
+                                            Section 2
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSection2" class="collapse" aria-labelledby="section2"
+                                    data-parent="#accordionSections">
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item" data-video-src="video.mp4">Video 4</li>
+                                            <li class="list-group-item" data-video-src="video.mp4">Video 5</li>
+                                            <li class="list-group-item" data-video-src="video.mp4">Video 6</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <p class="p-and-d">Programmed and Designed by <a
+                href="https://www.facebook.com/mohamed.meky.9212301?mibextid=ZbWKwL">Mohamed Elsayed</a> .</p>
+
+    </main>
+
+    <div id="accessDeniedNotification" class="alert alert-danger fixed-bottom" style="display: none;margin: 0;"></div>
+    <div id="successNotification" class="alert alert-success fixed-bottom" style="display: none;margin: 0;"></div>
+
+    <div id="termsWindow" class="terms-window">
+        <div class="terms-content">
+            <h2>Terms and Conditions</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat orci vel augue varius, eget
+                faucibus ex consectetur .</p>
+            <button class="btn btn-danger close-button" onclick="closeTermsWindow()">Close</button>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

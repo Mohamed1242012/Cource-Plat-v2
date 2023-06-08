@@ -1,0 +1,174 @@
+body {}
+
+.section-list {
+    display: none;
+}
+
+#accessDeniedNotification {
+    border-radius: 0;
+    border-style: none;
+    background-color: rgb(159, 0, 0);
+    color: #fff;
+    font-weight: 600;
+}
+
+#successNotification {
+    border-radius: 0;
+    border-style: none;
+    background-color: rgb(103, 171, 0);
+    color: #fff;
+    font-weight: 600;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+#loginForm {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+video {
+    width: 100%;
+}
+
+.terms-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.terms-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.terms-content {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 50rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 0 1.5rem;
+}
+
+.terms-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.terms-content p {
+    color: #666;
+}
+
+
+.Pl-em-txt {
+    margin-bottom: 0.5rem;
+}
+
+.sign-up-wrapper {
+    margin-bottom: 1rem;
+}
+
+
+.p-and-d {
+    text-align: center;
+    margin-top: 20rem;
+    padding: 0 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    video {
+        height: auto;
+    }
+}
+
+.terms-window {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.terms-content {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .embed-responsive {
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .accordion {
+        order: 2;
+    }
+}
